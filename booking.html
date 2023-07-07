@@ -92,10 +92,10 @@
                 <a href="service.html" class="nav-item nav-link">Services</a>
                 
                 <a href="team.html" class="nav-item nav-link">Technicians</a>
-                <a href="testimonial.html" class="nav-item nav-link active">Testimonial</a>            
+                <a href="testimonial.html" class="nav-item nav-link ">Testimonial</a>            
                 <a href="contact.html" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-success py-4 px-lg-5 d-none d-lg-block">Booking<i
+            <a href="" class="btn btn-success py-4 px-lg-5 d-none d-lg-block active">Booking<i
                     class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
@@ -187,11 +187,11 @@
                         <form>
                             <div class="row g-3">
                                 <div class="col-12 col-sm-6">
-                                    <input type="text" class="form-control border-0" placeholder="Your Name"
+                                    <input type="text" class="form-control border-0" id="name" placeholder="Your Name"
                                         style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
-                                    <input type="email" class="form-control border-0" placeholder="Your Email"
+                                    <input type="email" class="form-control border-0" id="email" placeholder="Your Email"
                                         style="height: 55px;">
                                 </div>
                                 <div class="col-12 col-sm-6">
@@ -206,16 +206,16 @@
                                 <div class="col-12 col-sm-6">
                                     <div class="date" id="date1" data-target-input="nearest">
                                         <input type="text" class="form-control border-0 datetimepicker-input"
-                                            placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker"
+                                            id="service" placeholder="Service Date" data-target="#date1" data-toggle="datetimepicker"
                                             style="height: 55px;">
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <textarea class="form-control border-0" placeholder="Special Request"></textarea>
+                                    <textarea class="form-control border-0" id="Request" placeholder="Special Request"></textarea>
                                 </div>
                                 <div class="col-12">
-                                    <button type="button" class="btn btn-secondary w-100 py-3 " data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
+                                    <button type="button" onclick="submitForm()" class="btn btn-secondary w-100 py-3 " data-bs-toggle="modal"
+                                        data-bs-target="#exampleModal" >
                                         Book Now
                                     </button>
 
@@ -229,7 +229,28 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="empty" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">
+                        <h2 class="m-0 text-success"><i class="fa fa-car me-3"></i>Minhas Motor </h2>
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Please fill all the fields!
+                  
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="filled" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -359,6 +380,10 @@
     <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
     <!-- Template Javascript -->
+    <script>
+        
+
+    </script>
     <script src="js/main.js"></script>
 </body>
 

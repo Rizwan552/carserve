@@ -179,19 +179,19 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <input type="text" class="form-control" id="service" placeholder="Subject">
                                         <label for="subject">Subject</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
+                                        <textarea class="form-control" placeholder="Leave a message here" id="Request"
                                             style="height: 100px"></textarea>
                                         <label for="message">Message</label>
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <button type="button" class="btn btn-success w-100 py-3 " data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <button type="button"  onclick="submitForm()" class="btn btn-success w-100 py-3 " data-bs-toggle="modal" data-bs-target="#exampleModal">
                                       SEND MESSAGE
                                        </button>
                                    
@@ -203,24 +203,48 @@
             </div>
         </div>
     </div>
-      <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel"><h2 class="m-0 text-success"><i class="fa fa-car me-3"></i>Minhas Motor </h2></h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="empty" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            <h2 class="m-0 text-success"><i class="fa fa-car me-3"></i>Minhas Motor </h2>
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Please fill all the fields!
+                      
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button"  class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-body">
-            Your Message has been Sent. <br>
-            will respond you as soon as possible.
+    
+          <!-- Modal -->
+          <div class="modal fade" id="filled" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            <h2 class="m-0 text-success"><i class="fa fa-car me-3"></i>Minhas Motor </h2>
+                        </h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Your Message has been Sent. <br>
+                        will respond you as soon as possible.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
     <!-- Contact End -->
 
 

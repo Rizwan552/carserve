@@ -108,3 +108,16 @@
     
 })(jQuery);
 
+function submitForm() {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var number = document.getElementById('service').value;
+    var message = document.getElementById('Request').value;
+    
+    if (name === '' || email === '' || number === '' || message === '') {
+        $('#empty').modal('show');
+    } else {
+        $('#filled').modal('show');
+      // Additional code to submit the form to the server if needed
+    }
+  }
